@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+    <br><br>
+    <form action="/mnist" method="post" enctype="multipart/form-data">
+        <div>
+            <label for = "formFileLg" class="form-label">Large file input example </label>
+            <input type="file" name="mnistfile" id="formFileLg" class="form-control form-control-lg">
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+    </form>
+</div>
+{% endblock %}
